@@ -1,0 +1,128 @@
+@import "tailwindcss";
+
+@layer base {
+  html,
+  body {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #F8FAFC;
+    color: #0F172A;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+.no-sb {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.no-sb::-webkit-scrollbar {
+  display: none;
+}
+
+.tap {
+  min-width: 44px;
+  min-height: 44px;
+}
+
+/* Custom Astana map pin matching part1.html */
+.ryadom-pin {
+  width: 32px;
+  height: 32px;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+  border: 3px solid #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.32);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.15s ease;
+}
+
+.ryadom-pin-inner {
+  transform: rotate(45deg);
+  font-size: 13px;
+  line-height: 1;
+  display: block;
+}
+
+.ryadom-pin-live {
+  width: 42px;
+  height: 42px;
+  border-width: 4px;
+  background-color: #10B981 !important;
+}
+
+.ryadom-pin-live .ryadom-pin-inner {
+  font-size: 16px;
+}
+
+@keyframes ryadom-ping {
+  75%, 100% {
+    transform: scale(2.35);
+    opacity: 0;
+  }
+}
+
+.ryadom-ping-ring {
+  position: absolute;
+  inset: -4px;
+  border-radius: 9999px;
+  background-color: rgba(16, 185, 129, 0.5);
+  animation: ryadom-ping 1.6s cubic-bezier(0, 0, 0.2, 1) infinite;
+  pointer-events: none;
+}
+
+/* Switch control matching part3.html */
+.sw {
+  appearance: none;
+  width: 40px;
+  height: 24px;
+  border-radius: 999px;
+  background: #CBD5E1;
+  position: relative;
+  transition: background-color 0.2s;
+  cursor: pointer;
+  flex: none;
+}
+
+.sw::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s;
+}
+
+.sw:checked {
+  background: #10B981;
+}
+
+.sw:checked::after {
+  transform: translateX(16px);
+}
+
+.sw-danger:checked {
+  background: #EF4444;
+}
+
+/* Leaflet overrides inside mobile frame */
+.leaflet-container {
+  font-family: 'Inter', system-ui, sans-serif;
+  z-index: 1;
+}
+
+.leaflet-div-icon {
+  background: transparent;
+  border: none;
+}
+
+.leaflet-control-attribution {
+  font-size: 9px !important;
+  opacity: 0.7;
+}
