@@ -1,20 +1,13 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+﻿# Рядом — интерактивная карта мероприятий Астаны
 
-# Run and deploy your AI Studio app
+Веб-приложение (PWA) и Telegram-экосистема для поиска и публикации локальных городских, студенческих и культурных событий в Астане.
 
-This contains everything you need to run your app locally.
+## Технологический стек
+- **Frontend:** React, TypeScript, Vite, Tailwind CSS, Leaflet (OpenStreetMap), PWA
+- **Backend & DB:** Supabase (PostgreSQL, PostGIS, Row Level Security, Edge Functions, Storage)
+- **Hosting:** Vercel Edge Network
 
-View your app in AI Studio: https://ai.studio/apps/90823278-4d79-4486-bf14-d311c198e883
-
-## Run Locally
-
-**Prerequisites:**  Node.js
-
-
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## Локальный запуск
+1. Установите зависимости: `npm install`
+2. Скопируйте `.env.example` в `.env` и укажите `VITE_SUPABASE_URL`, `VITE_SUPABASE_ANON_KEY`, `VITE_TELEGRAM_BOT_USERNAME`
+3. Запустите проект: `npm run dev`

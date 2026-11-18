@@ -6,3 +6,4 @@ coverage/
 *.log
 .env*
 !.env.example
+if ((Get-Content .gitignore -Raw) -notmatch "dev-dist") { Add-Content .gitignore "`ndev-dist/" }

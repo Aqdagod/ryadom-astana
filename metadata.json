@@ -1,6 +1,0 @@
-{
-  "name": "Рядом — Карта мероприятий Астаны",
-  "description": "Интерактивная PWA-карта локальных бесплатных и городских мероприятий Астаны в часовом поясе Asia/Almaty.",
-  "requestFramePermissions": ["geolocation"],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
-}

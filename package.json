@@ -1,10 +1,10 @@
-{
+﻿{
   "name": "react-example",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "tsx server.ts",
+    "dev": "vite",
     "start": "node server.ts",
     "build": "vite build",
     "preview": "vite preview",
@@ -39,3 +39,5 @@
     "@types/express": "^4.17.21"
   }
 }
+
+
